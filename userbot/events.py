@@ -56,7 +56,7 @@ def register(**args):
                 await check.respond("`Are you sure this is a group?`")
                 return
             if check.via_bot_id and not insecure:
-                if event.out:
+                if check.out:
                     LOGS.warn("WARNING: Potentially mallicious inline bot found! [Bot ID: {check.via_bot_id}]")
                     return
 
